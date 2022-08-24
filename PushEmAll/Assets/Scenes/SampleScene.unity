@@ -3643,6 +3643,8 @@ MonoBehaviour:
   _stickObject: {fileID: 689094621}
   _speed: 400
   _rotationSpeed: 200
+  pushTime: 1
+  pushDistance: 4
 --- !u!65 &829020336
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7222,7 +7224,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52906d8909ae3404a8811521f39e059f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_aiCount: 0
 --- !u!4 &2012752927
 Transform:
   m_ObjectHideFlags: 0
