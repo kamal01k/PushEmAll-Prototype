@@ -1,4 +1,5 @@
 using Assignment.Events;
+using Assignment.UI;
 using UnityEngine;
 
 namespace Assignment.AI
@@ -12,7 +13,6 @@ namespace Assignment.AI
                 if(m_aiCount < 0)
                 {
                     m_aiCount = 0;
-                    GameEvents.Instance.ZoneComplete();
                 }
                 return m_aiCount;
             } 
@@ -22,18 +22,17 @@ namespace Assignment.AI
             }
         }
 
-        [SerializeField] private int m_aiCount = 0;
-
-        // Start is called before the first frame update
-        void Start()
-        {
-            
-        }
+        private int m_aiCount = 0;
 
         public void EnemyKill()
         {
             AiCount--;
-            
+            //Debug.Log($"ai count {m_aiCount}");
+            if(m_aiCount <= 0)
+            {
+                m_aiCount = 0;
+                GameEvents.Instance.ZoneComplete();
+            }
         }
     }
 }

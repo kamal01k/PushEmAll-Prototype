@@ -4,14 +4,14 @@ using UnityEngine;
 
 namespace Assignment.Zone
 {
-    public class EnterEnemyZone : MonoBehaviour
+    public class FinishZoneTrigger : MonoBehaviour
     {
         private void OnTriggerEnter(Collider other)
         {
             if(other.TryGetComponent(out IPlayerController a_player))
             {
                 gameObject.SetActive(false);
-                GameEvents.Instance.EnterEnemyZone();
+                GameEvents.Instance.LevelFinish();
             }
         }
     }

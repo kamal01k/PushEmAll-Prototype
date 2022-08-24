@@ -1,10 +1,12 @@
+using System;
 using UnityEngine;
 
 namespace Assignment.Zone
 {
+    [Serializable]
     public class LevelZone : MonoBehaviour
     {
-        [SerializeField] private Transform _bridge;
-        [SerializeField] private GameObject _ai;
+        public GameObject Bridge;
+        public GameObject AiGroup;
     }
 }

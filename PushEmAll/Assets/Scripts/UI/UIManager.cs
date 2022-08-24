@@ -13,6 +13,8 @@ namespace Assignment.UI
         [SerializeField] private GameObject retryBtn;
         [SerializeField] private GameObject scoreCanvas;
 
+        private int _score = 0;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -22,12 +24,13 @@ namespace Assignment.UI
 
         public void ScoreCount(int a_score)
         {
-            scoreText.text = $"Score - {a_score}";
+            _score += a_score; 
+            scoreText.text = $"Score - {_score}";
         }
 
-        public void EnemyCount(int a_enemy)
+        public void EnemyCount(int a_enemyCount)
         {
-            enemyText.text = $"Enemy - {a_enemy}";
+            enemyText.text = $"Enemy - {a_enemyCount}";
         }
 
         private void StartGame()
